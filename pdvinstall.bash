@@ -33,7 +33,7 @@ sudo chmod -R 2777 /pdv/
 sudo chmod -R 2777 /home/$USER/
 
 echo "Digite o IP do servidor da pasta vr"
-
+pause
 read IP_DO_SERVIDOR
 
 echo //$IP_DO_SERVIDOR/vr /pdv_vr/ cifs username=pdv,password=pdv 0 0 >> /etc/fstab
