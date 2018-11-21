@@ -4,7 +4,7 @@
 echo 'Iniciando a instalacao do VR PDV Aguarde....'
 
 #Removendo Instalador Padrão
-sudo rm -rf /pdvinstall.bash
+#sudo rm -rf /pdvinstall.bash
 
 sudo apt-get -y update
 
