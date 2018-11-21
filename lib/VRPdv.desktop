@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=VRPdv
+Exec=java -jar /pdv/exec/VRPdv.jar
+Icon=/pdv/exec/img/VRPdv.ico
+Type=Application
+Categories=VR
