@@ -1,5 +1,7 @@
 #!/bin/bash
 
+read IP
+
 # Iniciando a instalacao do VR Pdv
 echo 'Iniciando a instalacao do VR PDV Aguarde....'
 
