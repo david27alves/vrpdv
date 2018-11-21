@@ -1,4 +1,4 @@
-VRPdv this is an application of VRFoftware 
+VRPdv this is an application of VR Software 
 
 ## Install
 
