@@ -38,7 +38,7 @@ echo "Digite o IP do servidor da pasta vr"
 
 echo //192.168.88.44/vr /pdv_vr/ cifs username=pdv,password=pdv 0 0 >> /etc/fstab
 
-sudo mount //$IP_DO_SERVIDOR/vr /pdv_vr/ -o username=pdv,password=pdv
+sudo mount //192.168.88.44/vr /pdv_vr/ -o username=pdv,password=pdv
 
 #Copiando Arquivos do PDV
 sudo cp -r /pdv_vr/pdv/* /pdv/
