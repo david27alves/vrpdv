@@ -44,8 +44,11 @@ sudo mount //$IP_DO_SERVIDOR/vr /pdv_vr/ -o username=pdv,password=pdv
 sudo cp -r /pdv_vr/pdv/* /pdv/
 sudo chmod g+w /pdv/database/VR.FDB
 
-sudo cp -r /pdv/VrPdv.desktop /home/$USER/Área\ de\ Trabalho/
-sudo cp -r /pdv/VrPdv.desktop /home/$USER/Desktop
+#sudo cp -r /pdv/VrPdv.desktop /home/$USER/Área\ de\ Trabalho/
+#sudo cp -r /pdv/VrPdv.desktop /home/$USER/Desktop
+
+wget https://raw.githubusercontent.com/david27alves/vrpdv/master/lib/VRPdv.desktop /home/$USER/Área\ de\ Trabalho/
+wget https://raw.githubusercontent.com/david27alves/vrpdv/master/lib/VRPdv.desktop /home/$USER/Desktop
 
 #Copiando properties do servidor
 sudo cp -r /pdv_vr/vr.properties /vr/vr.properties
