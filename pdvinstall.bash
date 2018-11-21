@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "IP do servidor"
 
 read IP
 
