@@ -61,7 +61,7 @@ sudo cp -r /pdv_vr/pdv/lib/ /usr/lib
 
 #Baixando ECF Teste
 cd /pdv/util/
-sudo wget http://vrsoftware.dyndns.org:34000/wiki/arquivos/linux/ecf_teste/ecf.tar.bz2
+sudo wget https://github.com/david27alves/vrpdv/blob/master/lib/ecf.tar.bz2?raw=true
 sudo tar -jxvf ecf.tar.bz2
 sudo chmod -R 2777 ecf
 
