@@ -3,3 +3,6 @@
 echo "teste"
 
 read variavel
+
+echo $variavel
+echo "passou direto"
