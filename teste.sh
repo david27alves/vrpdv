@@ -60,7 +60,7 @@ copy_files()
 download_files()
 {
   sudo wget https://raw.githubusercontent.com/david27alves/vrpdv/master/lib/VRPdv.desktop /home/$USER/Área\ de\ Trabalho/
-  sudo wget https://raw.githubusercontent.com/david27alves/vrpdv/master/lib/VRPdv.desktop /home/$USER/Desktop
+  #sudo wget https://raw.githubusercontent.com/david27alves/vrpdv/master/lib/VRPdv.desktop /home/$USER/Desktop
   cd /pdv/util/
   sudo wget https://github.com/david27alves/vrpdv/blob/master/lib/ecf.tar.bz2?raw=true
   sudo tar -jxvf ecf.tar.bz2
