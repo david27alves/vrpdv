@@ -53,13 +53,16 @@ copy_files()
   echo "Copying database..."
   sudo cp -r /pdv_vr/pdv/database/VR.FDB /pdv/database/
   sudo chmod g+w /pdv/database/VR.FDB
+  echo "Copying icons..."
+  sudo cp -r /pdv_vr/exec/img/ /pdv/exec/
   echo "Copying VRPdv..."
   sudo cp -r /pdv_vr/exec/VRPdv.jar /pdv/exec/
 }
 
 download_files()
 {
-  sudo wget https://raw.githubusercontent.com/david27alves/vrpdv/master/lib/VRPdv.desktop /home/$USER/Área\ de\ Trabalho/
+  cd /home/$USER/Área\ de\ Trabalho/
+  sudo wget https://raw.githubusercontent.com/david27alves/vrpdv/master/lib/VRPdv.desktop
   #sudo wget https://raw.githubusercontent.com/david27alves/vrpdv/master/lib/VRPdv.desktop /home/$USER/Desktop
   cd /pdv/util/
   sudo wget https://github.com/david27alves/vrpdv/blob/master/lib/ecf.tar.bz2?raw=true
