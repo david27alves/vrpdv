@@ -53,6 +53,8 @@ copy_files()
   echo "Copying database..."
   sudo cp -r /pdv_vr/pdv/database/VR.FDB /pdv/database/
   sudo chmod g+w /pdv/database/VR.FDB
+  echo "Copying VRPdv..."
+  sudo cp -r /pdv_vr/exec/VRPdv.jar
 }
 
 download_files()
