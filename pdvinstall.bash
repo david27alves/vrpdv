@@ -1,13 +1,10 @@
 #!/bin/bash
-echo "IP do servidor"
-
-read IP
 
 # Iniciando a instalacao do VR Pdv
 echo 'Iniciando a instalacao do VR PDV Aguarde....'
 
 #Removendo Instalador Padrão
-#sudo rm -rf /pdvinstall.bash
+sudo rm -rf /pdvinstall.bash
 
 sudo apt-get -y update
 
@@ -37,21 +34,18 @@ sudo chmod -R 2777 /home/$USER/
 
 echo "Digite o IP do servidor da pasta vr"
 
-#read IP_DO_SERVIDOR
+read IP_DO_SERVIDOR
 
-echo //192.168.88.44/vr /pdv_vr/ cifs username=pdv,password=pdv 0 0 >> /etc/fstab
+echo //$IP_DO_SERVIDOR/vr /pdv_vr/ cifs username=pdv,password=pdv 0 0 >> /etc/fstab
 
-sudo mount //192.168.88.44/vr /pdv_vr/ -o username=pdv,password=pdv
+sudo mount //$IP_DO_SERVIDOR/vr /pdv_vr/ -o username=pdv,password=pdv
 
 #Copiando Arquivos do PDV
 sudo cp -r /pdv_vr/pdv/* /pdv/
 sudo chmod g+w /pdv/database/VR.FDB
 
-#sudo cp -r /pdv/VrPdv.desktop /home/$USER/Área\ de\ Trabalho/
-#sudo cp -r /pdv/VrPdv.desktop /home/$USER/Desktop
-
-wget https://raw.githubusercontent.com/david27alves/vrpdv/master/lib/VRPdv.desktop /home/$USER/Área\ de\ Trabalho/
-wget https://raw.githubusercontent.com/david27alves/vrpdv/master/lib/VRPdv.desktop /home/$USER/Desktop
+sudo cp -r /pdv/VrPdv.desktop /home/$USER/Área\ de\ Trabalho/
+sudo cp -r /pdv/VrPdv.desktop /home/$USER/Desktop
 
 #Copiando properties do servidor
 sudo cp -r /pdv_vr/vr.properties /vr/vr.properties
@@ -67,7 +61,7 @@ sudo cp -r /pdv_vr/pdv/lib/ /usr/lib
 
 #Baixando ECF Teste
 cd /pdv/util/
-sudo wget https://github.com/david27alves/vrpdv/blob/master/lib/ecf.tar.bz2?raw=true
+sudo wget http://vrsoftware.dyndns.org:34000/wiki/arquivos/linux/ecf_teste/ecf.tar.bz2
 sudo tar -jxvf ecf.tar.bz2
 sudo chmod -R 2777 ecf
 
