@@ -13,7 +13,7 @@ sudo xrandr -s 800x600 -r 60.00
 sudo echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf
 
 #Criando Rota Martins
-#sudo route add -net 172.19.0.0 netmask 255.255.0.0 gw 192.168.5.252
+sudo route add -net 172.19.0.0 netmask 255.255.0.0 gw 192.168.1.201
 
 sudo xset -dpms
 sudo xset s off
@@ -22,9 +22,13 @@ sudo chmod +777 /etc/fstab
 
 #Criando as Pastas
 sudo mkdir /vr/
+sudo mkdir /pdv/nfe/
+sudo mkdir /pdv/sitef/
 
 sudo chmod -R 2777 /vr/
 sudo chmod -R 2777 /pdv/
+sudo chmod -R 2777 /pdv/sitef/
+sudo chmod -R 2777 /pdv/nfe/
 sudo chmod -R 2777 /home/$USER/
 
 echo "Digite o IP do servidor da pasta vr"
@@ -37,11 +41,15 @@ sudo mount //$IP_DO_SERVIDOR/vr /pdv_vr/ -o username=pdv,password=pdv
 
 #Copiando Arquivos do PDV
 sudo cp -r /pdv_vr/pdv/* /pdv/
-sudo cp -r /pdv_vr/pdv/exec/VRPdv.jar /pdv/exec/
-sudo cp -r /pdv_vr/pdv/exec/lib/* /pdv/exec/lib/
-sudo cp -r /pdv_vr/vr.properties /vr/
+sudo cp -r /pdv_vr/exec/VRPdv.jar /pdv/exec/
+sudo cp -r /pdv_vr/exec/lib/* /pdv/exec/lib/
+sudo cp -r /pdv_vr/pdv/sitef/* /pdv/sitef/
+sudo cp -r /pdv_vr/nfe/* /pdv/nfe
+sudo cp -r /pdv_vr/pdv/vr.properties /vr/
 
-sudo chmod g+w /pdv/database/VR.FDB
+
+sudo chmod 777 /pdv/database/VR.FDB
+sudo chmod 777 /home/pdv/PDV.FDB
 
 sudo cp -r /pdv/VRPdv.desktop /home/$USER/Área\ de\ Trabalho/
 sudo cp -r /pdv/VRPdv.desktop /home/$USER/Desktop
@@ -50,8 +58,7 @@ sudo cp -r /pdv/VRPdv.desktop /home/$USER/Desktop
 sudo cp -r /pdv/sitef/* /usr/lib/
 sudo rm -rf /usr/lib/libclisitef32.so
 
-sudo chmod 444 /usr/lib/CliSiTef.ini
-
+sudo chmod 777 /usr/lib/CliSiTef.ini
 sudo chmod 777 /usr/lib/libclisitef.so
 sudo chmod 777 /usr/lib/libemv.so
 sudo chmod 777 /usr/lib/rechargeRPC.so
